@@ -1,0 +1,7 @@
+age_class,genus,n,mean_sa_vol,mean_surface,mean_volume
+Mature (31-60 yr),oak,3,25.9,3897,154.1
+Old (>60 yr),oak,4,20.01,5432,273.2
+Young (≤30 yr),oak,2,33.39,1192,36.8
+Mature (31-60 yr),pine,3,19.4,6891,359.2
+Old (>60 yr),pine,2,15.08,6434,426.8
+Young (≤30 yr),pine,2,30.28,5454,183.7
