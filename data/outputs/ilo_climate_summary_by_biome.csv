@@ -1,0 +1,9 @@
+gauci_biome,n,mean_lai,mean_temp,mean_precip,temp_range,precip_range
+Temperate Conifer Forests,295,5.89,7.9,1239,0.4 to 19.4,220 to 3400
+Tropical & Subtropical Coniferous Forests,5,5.11,23.3,2328,21.7 to 26,1342 to 2800
+Tropical & Subtropical Moist Broadleaf Forests,112,4.97,24.4,2369,20.5 to 27.8,625 to 4000
+"Trop. & Subtrop. Grasslands, Savannas &",24,4.6,24.6,1596,20.3 to 28.5,460 to 4500
+Temperate Broadleaf & Mixed Forests,588,4.52,10.3,1204,-9.4 to 20,180 to 5000
+Boreal Forests/Taiga,89,2.36,-3.3,446,-10.9 to 5.5,188 to 780
+Trop. & Subtrop. Dry Broadleaf Forests,2,0.86,20.7,320,20.5 to 20.9,232 to 407
+"Mediterranean Forests, Woodlands & Scrub",15,0.57,17.3,332,12.2 to 19.5,258 to 491

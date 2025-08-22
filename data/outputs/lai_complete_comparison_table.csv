@@ -1,0 +1,22 @@
+gauci_biome,q25,q75,min_lai,max_lai,n_Asner,n_ILO,mean_lai_Asner,mean_lai_ILO,median_lai_Asner,median_lai_ILO,sd_lai_Asner,sd_lai_ILO,mean_diff,median_diff,n_total,in_both
+Temperate Broadleaf & Mixed Forests,2.4,5.7,0.01,10.7,0,1340,NA,4.13,NA,4.05,NA,2.22,NA,NA,1340,FALSE
+Temperate Conifer Forests,3.24,7.36,0,13.8,0,811,NA,5.53,NA,5.07,NA,2.89,NA,NA,811,FALSE
+Temperate Conifer Forests,2.6,6.94,0,14.5,285,0,5.15,NA,5,NA,3.16,NA,NA,NA,285,FALSE
+Temperate Broadleaf & Mixed Forests,3.92,6.4,0.4,10.1,234,0,5.16,NA,5.23,NA,1.74,NA,NA,NA,234,FALSE
+Boreal Forests/Taiga,1.43,3.62,0.01,8.41,0,206,NA,2.78,NA,2.44,NA,1.82,NA,NA,206,FALSE
+Boreal Forests/Taiga,1.8,3.35,0.28,6.21,161,0,2.73,NA,2.7,NA,1.3,NA,NA,NA,161,FALSE
+Tropical & Subtropical Moist Broadleaf Forests,3.09,6.71,0.65,10.12,0,112,NA,4.97,NA,4.86,NA,2.13,NA,NA,112,FALSE
+Tropical & Subtropical Moist Broadleaf Forests,3.49,6.12,1.48,8.7,68,0,4.83,NA,4.6,NA,1.76,NA,NA,NA,68,FALSE
+"Temperate Grasslands, Savannas &Shrublands",1.45,4.92,0.29,8.25,51,0,3.38,NA,3.29,NA,2.18,NA,NA,NA,51,FALSE
+Trop. & Subtrop. Dry Broadleaf Forests,3.03,8.23,0.6,14.6,38,0,5.99,NA,5.78,NA,3.86,NA,NA,NA,38,FALSE
+"Temperate Grasslands, Savannas &Shrublands",1.97,8.33,0.72,17.4,0,28,NA,5.99,NA,4.33,NA,5.07,NA,NA,28,FALSE
+"Trop. & Subtrop. Grasslands, Savannas &",3.08,6,0.26,10.4,0,24,NA,4.6,NA,3.9,NA,2.88,NA,NA,24,FALSE
+"Mediterranean Forests, Woodlands & Scrub",0.3,0.73,0.1,1.29,0,15,NA,0.57,NA,0.59,NA,0.36,NA,NA,15,FALSE
+"Mediterranean Forests, Woodlands & Scrub",1.2,2.63,0.61,3.89,13,0,2.01,NA,1.89,NA,1.05,NA,NA,NA,13,FALSE
+Deserts & Xeric Shrublands,0.98,2.12,0.59,3.7,12,0,1.69,NA,1.49,NA,0.94,NA,NA,NA,12,FALSE
+Tundra,1.1,2.4,0.18,5.3,11,0,1.88,NA,1.4,NA,1.47,NA,NA,NA,11,FALSE
+Flooded Grasslands & Savannas,2.38,7.8,1.02,8.4,7,0,5.22,NA,6.8,NA,3.17,NA,NA,NA,7,FALSE
+Deserts & Xeric Shrublands,0.94,2.02,0.59,2.22,0,5,NA,1.47,NA,1.58,NA,0.7,NA,NA,5,FALSE
+Tropical & Subtropical Coniferous Forests,4.47,5.75,3,7.35,0,5,NA,5.11,NA,5,NA,1.6,NA,NA,5,FALSE
+"Trop. & Subtrop. Grasslands, Savannas &",1.25,3.12,0.5,5,4,0,2.38,NA,2,NA,1.93,NA,NA,NA,4,FALSE
+Trop. & Subtrop. Dry Broadleaf Forests,0.78,0.93,0.71,1,0,2,NA,0.86,NA,0.86,NA,0.21,NA,NA,2,FALSE

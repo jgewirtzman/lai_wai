@@ -1,0 +1,16 @@
+﻿Biome,MAT degC weighted,Biome area MHa,MODIS Mean Forest Cover Proportion,Cnsus Mean Forest Cover Proportion,Cnsus+Shrubs Mean Forest Cover Proportion,MODIS wood surf. area Mha,Cnsus wood surf. area Mha,Cnsus+Shrubs wood surface area Mha
+Boreal Forests/Taiga,-2,1532,0.307,0.687,0.836,1440,3230,3930
+Deserts & Xeric Shrublands,20.2,2632,0.011,0.021,0.189,92,174,1530
+Flooded Grasslands & Savannas,22.1,115,0.173,0.403,0.493,61,143,175
+Mangroves,26.7,33,0.334,0.516,0.544,34,53,56
+"Mediterranean Forests, Woodlands & Scrub",16.7,330,0.102,0.181,0.399,103,184,404
+Montane Grasslands & Shrublands,3,487,0.06,0.062,0.187,89,93,280
+Rock and Ice,-0.4,1408,0.001,0.001,0.003,4,4,15
+Temperate Broadleaf & Mixed Forests,10,1256,0.302,0.399,0.424,1170,1540,1640
+Temperate Conifer Forests,4.9,376,0.35,0.616,0.673,405,713,778
+"Temperate Grasslands, Savannas &Shrublands",9.5,1057,0.086,0.111,0.218,280,360,710
+Tropical & Subtropical Coniferous Forests,18.8,68,0.321,0.595,0.703,68,125,148
+Trop. & Subtrop. Dry Broadleaf Forests,26,388,0.197,0.356,0.434,235,424,518
+"Trop. & Subtrop. Grasslands, Savannas &",25.5,2139,0.138,0.404,0.548,911,266,3600
+Tropical & Subtropical Moist Broadleaf Forests «,24.3,1958,0.502,0.691,0.723,4040,5570,5830
+Tundra,-6.8,853,0.41,0.117,0.401,109,308,1050

@@ -1,0 +1,10 @@
+gauci_biome,n_Asner,n_ILO,larger_dataset,mean_lai_Asner,mean_lai_ILO,mean_diff,mean_agreement,median_lai_Asner,median_lai_ILO,median_diff,median_agreement,ilo_higher
+Temperate Broadleaf & Mixed Forests,234,1340,ILO,5.16,4.13,-1.03,Different,5.23,4.05,-1.18,Different,FALSE
+Temperate Conifer Forests,285,811,ILO,5.15,5.53,0.38,Very Similar,5,5.07,0.07,Very Similar,TRUE
+Boreal Forests/Taiga,161,206,ILO,2.73,2.78,0.05,Very Similar,2.7,2.44,-0.26,Very Similar,TRUE
+Tropical & Subtropical Moist Broadleaf Forests,68,112,ILO,4.83,4.97,0.14,Very Similar,4.6,4.86,0.26,Very Similar,TRUE
+"Temperate Grasslands, Savannas &Shrublands",51,28,Asner,3.38,5.99,2.61,Very Different,3.29,4.33,1.04,Different,TRUE
+Trop. & Subtrop. Dry Broadleaf Forests,38,2,Asner,5.99,0.86,-5.13,Very Different,5.78,0.86,-4.92,Very Different,FALSE
+"Mediterranean Forests, Woodlands & Scrub",13,15,ILO,2.01,0.57,-1.44,Different,1.89,0.59,-1.3,Different,FALSE
+"Trop. & Subtrop. Grasslands, Savannas &",4,24,ILO,2.38,4.6,2.22,Very Different,2,3.9,1.9,Different,TRUE
+Deserts & Xeric Shrublands,12,5,Asner,1.69,1.47,-0.22,Very Similar,1.49,1.58,0.09,Very Similar,FALSE

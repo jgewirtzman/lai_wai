@@ -1,0 +1,10 @@
+gauci_biome,consensus_mean_expert,asner_weight_final,ilo_weight_final,expert_rationale,asner_quality,ilo_quality
+Temperate Broadleaf & Mixed Forests,4.645,0.5,0.5,Balanced weighting,1,1
+Temperate Conifer Forests,5.340000000000001,0.5,0.5,Balanced weighting,1,1
+Boreal Forests/Taiga,2.7536842105263153,0.5263157894736842,0.47368421052631576,Balanced weighting,1,0.9
+Tropical & Subtropical Moist Broadleaf Forests,4.8999999999999995,0.5,0.5,Balanced weighting,0.8,0.8
+"Temperate Grasslands, Savannas &Shrublands",4.498571428571428,0.5714285714285714,0.42857142857142855,Balanced weighting,0.8,0.6
+Trop. & Subtrop. Dry Broadleaf Forests,4.28,0.6666666666666666,0.3333333333333333,Moderate favor Asner,0.6,0.3
+"Mediterranean Forests, Woodlands & Scrub",1.2899999999999998,0.5,0.5,Balanced weighting,0.5,0.5
+"Trop. & Subtrop. Grasslands, Savannas &",3.8599999999999994,0.3333333333333333,0.6666666666666666,Moderate favor ILO,0.3,0.6
+Deserts & Xeric Shrublands,1.5922222222222222,0.5555555555555555,0.4444444444444444,Balanced weighting,0.5,0.4

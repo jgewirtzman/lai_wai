@@ -1,0 +1,12 @@
+Gauci Biome,n (filtered),n (total),% kept,Mean LAI,Median LAI,SD LAI,Q25,Q75,Range
+Flooded Grasslands & Savannas,7,7,100,5.22,6.8,3.17,2.38,7.8,1.02 - 8.4
+Trop. & Subtrop. Dry Broadleaf Forests,38,40,95,5.99,5.78,3.86,3.03,8.23,0.6 - 14.6
+Temperate Broadleaf & Mixed Forests,234,242,96.7,5.16,5.23,1.74,3.92,6.4,0.4 - 10.1
+Temperate Conifer Forests,285,304,93.8,5.15,5,3.16,2.6,6.94,0 - 14.5
+Tropical & Subtropical Moist Broadleaf Forests,68,69,98.6,4.83,4.6,1.76,3.49,6.12,1.48 - 8.7
+"Temperate Grasslands, Savannas &Shrublands",51,55,92.7,3.38,3.29,2.18,1.45,4.92,0.29 - 8.25
+Boreal Forests/Taiga,161,174,92.5,2.73,2.7,1.3,1.8,3.35,0.28 - 6.21
+"Trop. & Subtrop. Grasslands, Savannas &",4,4,100,2.38,2,1.93,1.25,3.12,0.5 - 5
+"Mediterranean Forests, Woodlands & Scrub",13,13,100,2.01,1.89,1.05,1.2,2.63,0.61 - 3.89
+Deserts & Xeric Shrublands,12,12,100,1.69,1.49,0.94,0.98,2.12,0.59 - 3.7
+Tundra,11,13,84.6,1.88,1.4,1.47,1.1,2.4,0.18 - 5.3

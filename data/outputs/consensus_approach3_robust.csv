@@ -1,0 +1,10 @@
+gauci_biome,consensus_median_robust,consensus_median_similarity,abs_diff,robust_confidence
+Temperate Broadleaf & Mixed Forests,4.640000000000001,4.64,1.1800000000000006,Low
+Temperate Conifer Forests,5.035,5.035,0.07000000000000028,High
+Boreal Forests/Taiga,2.5700000000000003,2.5700000000000003,0.26000000000000023,High
+Tropical & Subtropical Moist Broadleaf Forests,4.73,4.73,0.2600000000000007,High
+"Temperate Grasslands, Savannas &Shrublands",3.81,3.8099999999999996,1.04,Low
+Trop. & Subtrop. Dry Broadleaf Forests,3.3200000000000003,3.32,4.92,Very Low
+"Mediterranean Forests, Woodlands & Scrub",1.24,1.24,1.2999999999999998,Low
+"Trop. & Subtrop. Grasslands, Savannas &",2.95,2.95,1.9,Low
+Deserts & Xeric Shrublands,1.5350000000000001,1.5350000000000001,0.09000000000000008,High

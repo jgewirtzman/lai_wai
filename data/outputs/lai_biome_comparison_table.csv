@@ -1,0 +1,13 @@
+gauci_biome,n_Asner,mean_lai_Asner,median_lai_Asner,sd_lai_Asner,n_ILO,mean_lai_ILO,median_lai_ILO,sd_lai_ILO,mean_diff,median_diff,n_total,has_both
+Temperate Broadleaf & Mixed Forests,234,5.16,5.23,1.74,1340,4.13,4.05,2.22,-1.03,-1.18,1574,TRUE
+Temperate Conifer Forests,285,5.15,5,3.16,811,5.53,5.07,2.89,0.38,0.07,1096,TRUE
+Boreal Forests/Taiga,161,2.73,2.7,1.3,206,2.78,2.44,1.82,0.05,-0.26,367,TRUE
+Tropical & Subtropical Moist Broadleaf Forests,68,4.83,4.6,1.76,112,4.97,4.86,2.13,0.14,0.26,180,TRUE
+"Temperate Grasslands, Savannas &Shrublands",51,3.38,3.29,2.18,28,5.99,4.33,5.07,2.61,1.04,79,TRUE
+Trop. & Subtrop. Dry Broadleaf Forests,38,5.99,5.78,3.86,2,0.86,0.86,0.21,-5.13,-4.92,40,TRUE
+"Mediterranean Forests, Woodlands & Scrub",13,2.01,1.89,1.05,15,0.57,0.59,0.36,-1.44,-1.3,28,TRUE
+"Trop. & Subtrop. Grasslands, Savannas &",4,2.38,2,1.93,24,4.6,3.9,2.88,2.22,1.9,28,TRUE
+Deserts & Xeric Shrublands,12,1.69,1.49,0.94,5,1.47,1.58,0.7,-0.22,0.09,17,TRUE
+Tundra,11,1.88,1.4,1.47,0,NA,NA,NA,NA,NA,11,FALSE
+Flooded Grasslands & Savannas,7,5.22,6.8,3.17,0,NA,NA,NA,NA,NA,7,FALSE
+Tropical & Subtropical Coniferous Forests,0,NA,NA,NA,5,5.11,5,1.6,NA,NA,5,FALSE
