@@ -39,7 +39,7 @@ truncated_cone_lateral_area <- function(r1, r2, h) {
 }
 
 # Calculate lateral surface areas for different sampling heights
-sampling_heights <- c(2, 10, 26)  # from ground to sampling height
+sampling_heights <- c(1.37, 2, 10, 20, 26)  # from ground to sampling height
 results <- data.frame(
   sampling_height = sampling_heights,
   surface_area = numeric(length(sampling_heights)),
