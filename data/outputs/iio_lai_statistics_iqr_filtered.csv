@@ -1,0 +1,15 @@
+gauci_biome,n,mean_lai,sd_lai,median_lai,q25,q75,min_lai,max_lai
+Temperate Conifer Forests,338,6.04,3.43,5.5,3.37,8.21,0.01,16.01
+Tropical & Subtropical Moist Broadleaf Forests,248,5.09,2.48,4.91,3.14,6.7,0.37,12.3
+Temperate Broadleaf & Mixed Forests,1151,5.02,2.19,4.87,3.42,6.5,0.08,11.1
+Mangroves,31,4.17,1.1,4.2,3.52,4.99,1.56,5.86
+Trop. & Subtrop. Dry Broadleaf Forests,23,3.99,1.85,3.8,2.68,5.15,1.42,8
+Montane Grasslands & Shrublands,45,4.06,2.49,3.7,2.4,5.6,0.32,10.21
+Boreal Forests/Taiga,234,3.58,2.09,3.09,2.05,5.1,0.15,9.78
+"Mediterranean Forests, Woodlands & Scrub",184,3.36,1.95,2.94,1.9,4.78,0.13,8.97
+Tropical & Subtropical Coniferous Forests,19,3.68,2.85,2.35,1.49,6.88,0.59,8.35
+"Temperate Grasslands, Savannas &Shrublands",103,2.4,0.96,2.24,1.88,3.07,0.17,4.8
+Deserts & Xeric Shrublands,84,2.03,1.45,2.1,0.59,2.95,0.1,5.39
+Flooded Grasslands & Savannas,2,1.36,1.11,1.36,0.97,1.76,0.58,2.15
+"Trop. & Subtrop. Grasslands, Savannas &",69,1.78,1.55,1,0.67,3,0.15,5.88
+Tundra,50,0.99,0.71,0.82,0.47,1.43,0.01,2.64

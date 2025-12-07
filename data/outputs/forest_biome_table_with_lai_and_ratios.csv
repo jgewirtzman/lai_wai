@@ -1,0 +1,9 @@
+Biome,Biome_Full,MAT degC weighted,Biome area MHa,LAI_1sided,LAI_2sided,n_observations,sd_lai,WAI,ratio_woody_leaf_1sided,ratio_woody_leaf_2sided
+Boreal Forests/Taiga,Taiga and Boreal Forest,-2,1532,3.095,6.19,234,2.0892191179652504,3.07,0.9919224555735056,0.4959612277867528
+Mangroves,Mangroves,26.7,33,4.2,8.4,31,1.097420239833264,3.07,0.7309523809523809,0.36547619047619045
+"Mediterranean Forests, Woodlands & Scrub","Mediterranean Forests, Woodlands, and Scrub",16.7,330,2.935,5.87,184,1.953179167911245,3.07,1.0459965928449744,0.5229982964224872
+Temperate Broadleaf & Mixed Forests,Temperate Broadleaf and Mixed Forests,10,1256,4.87,9.74,1151,2.190875801729669,3.07,0.6303901437371663,0.31519507186858314
+Temperate Conifer Forests,Temperate Coniferous Forests,4.9,376,5.5,11,338,3.4332308402214182,3.07,0.5581818181818181,0.27909090909090906
+Tropical & Subtropical Coniferous Forests,Tropical and Subtropical Coniferous Forests,18.8,68,2.35,4.7,19,2.848302356806502,3.07,1.306382978723404,0.653191489361702
+Trop. & Subtrop. Dry Broadleaf Forests,Tropical and Subtropical Dry Broadleaf Forests,26,388,3.8,7.6,23,1.8473268797888789,3.07,0.8078947368421052,0.4039473684210526
+Tropical & Subtropical Moist Broadleaf Forests,Tropical and Subtropical Moist Broadleaf Forests,24.3,1958,4.91,9.82,248,2.4800236891396823,4.12,0.8391038696537678,0.4195519348268839

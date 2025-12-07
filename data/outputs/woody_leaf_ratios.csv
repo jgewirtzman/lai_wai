@@ -1,0 +1,10 @@
+Biome_Full,MODIS_woody_leaf_ratio_2sided,interpretation
+"Tropical and Subtropical Grasslands, Savannas, and Shrublands",0.87,Leaf Dominant
+Deserts and Xeric Shrublands,0.78,Leaf Dominant
+"Temperate Grasslands, Savannas, and Shrublands",0.64,Leaf Dominant
+"Mediterranean Forests, Woodlands, and Scrub",0.46,Leaf Dominant
+Taiga and Boreal Forest,0.43,Leaf Dominant
+Tropical and Subtropical Moist Broadleaf Forests,0.4,Leaf Dominant
+Tropical and Subtropical Dry Broadleaf Forests,0.39,Leaf Dominant
+Temperate Broadleaf and Mixed Forests,0.31,Leaf Dominant
+Temperate Coniferous Forests,0.25,Leaf Dominant
