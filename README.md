@@ -1,186 +1,89 @@
-# LAI Biome Mapping and Consensus Analysis
+# Forest Biome LAI and Woody:Leaf Surface Area Ratios
 
-This project maps Leaf Area Index (LAI) data from two sources (Asner and Iio datasets) to standardized biome classifications and develops consensus LAI values for global biomes.
+This project calculates woody-to-leaf surface area ratios for global forest biomes by combining field-measured leaf area index (LAI) data with terrestrial laser scanning estimates of wood area index (WAI).
 
-## Project Overview
+## Overview
 
-This project integrates Leaf Area Index (LAI) data with woody surface area data from Gauci et al. (2024) to quantify global forest surface areas and woody:leaf ratios. The analysis enables calculation of total leaf surface area and leaf:woody surface area  by biome.
-
-The analysis workflow consists of 7 R scripts that process, map, analyze, and integrate LAI data:
-
-1. **Biome Mapping**: Map original LAI observation biome classifications to standardized biomes (WWF defined, as used in Gauci et al.)
-2. **Statistical Analysis**: Apply IQR filtering to LAI observations and calculate distributions by biome
-3. **Comparison**: Compare LAI values between datasets
-4. **Consensus Development**: Develop consensus LAI values using multiple approaches
-5. **Integration**: Calculate leaf surface areas and woody:leaf ratios using Gauci et al. woody surface data
+The analysis integrates:
+- **LAI data** from the Iio & Ito (2014) global woody plant database (ORNL DAAC)
+- **WAI data** from Gauci et al. (2024) terrestrial laser scanning measurements
+- **Biome classification** from WWF Terrestrial Ecoregions of the World
 
 ## Directory Structure
 
 ```
 ├── data/
-│   ├── inputs/                    # Raw input data
-│   │   ├── LAI_data_asner.csv    # Asner LAI dataset
-│   │   ├── lai_data_ilo.csv      # ILO LAI dataset
-│   │   ├── biome_table_gauci.csv # Gauci biome reference table
-│   │   └── official/             # Official reference data
-│   │       └── wwf_terr_ecos.shp # WWF ecoregions shapefile
-│   └── outputs/                  # Generated results and figures
-├── scripts/                      # Analysis scripts (01-07)
-└── README.md                     # This file
+│   ├── inputs/
+│   │   ├── LAI_Woody_Plants_1231/
+│   │   │   └── data/
+│   │   │       └── LAI_Woody_Plants_Database.csv   # Iio LAI database
+│   │   ├── biome_table_gauci.csv                   # Gauci biome reference table
+│   │   └── official/
+│   │       └── wwf_terr_ecos.shp                   # WWF ecoregions shapefile
+│   └── outputs/                                     # Generated results
+├── scripts/
+│   └── 01_wai.R                                    # Main analysis script
+└── README.md
 ```
 
-## Workflow Scripts
+## Workflow
 
-### 1. Asner LAI Mapping (`01_LAI_mapping.R`)
-- Maps Asner dataset biome categories to standardized Gauci biomes
-- Uses 3-step mapping: Biomecover → Biome → Spatial (WWF)
-- **Outputs**: `lai_data_with_gauci_mapping.csv`, `gauci_mapping_summary.csv`
+The analysis is contained in a single script (`01_wai.R`) that:
 
-### 2. Asner LAI Analysis (`02_LAI_calcs.R`)
-- Applies IQR filtering to remove outliers within each biome
-- Generates distribution plots and statistical summaries
-- **Outputs**: `lai_data_iqr_filtered.csv`, distribution plots
+1. **Loads Iio LAI database** - 2,653 site-specific maximum LAI measurements from 554 published studies (1932–2011)
 
-### 3. Iio LAI Mapping (`03_ilo_mapping.R`)
-- Maps Iio dataset to Gauci biomes using PFT, climate, and spatial data
-- Uses 4-step mapping: PFT+Climate → Species → Climate → Spatial
-- **Outputs**: `ilo_data_with_gauci_mapping.csv`, `ilo_gauci_mapping_summary.csv`
+2. **Extracts clumping-corrected LAI** - Uses `Corrected_total_LAI_HSA` values, which account for non-random foliage distribution
 
-### 4. Iio LAI Analysis (`04_ilo_calcs.R`)
-- Applies IQR filtering and analyzes ILO LAI distributions
-- Includes PFT-specific analysis and climate relationships
-- **Outputs**: `ilo_lai_data_iqr_filtered.csv`, distribution plots
+3. **Maps to WWF biomes** - Spatial intersection of measurement coordinates with WWF Terrestrial Ecoregions (99.5% classification success)
 
-### 5. Dataset Comparison (`05_compare_lais.R`)
-- Compares LAI values between Asner and ILO datasets by biome
-- Creates comparison visualizations and summary tables
-- **Outputs**: `lai_biome_comparison_table.csv`, comparison plots
+4. **Restricts to forest biomes** - Eight closed-canopy forest biomes where WAI estimates exist:
+   - Boreal Forests/Taiga
+   - Temperate Broadleaf & Mixed Forests
+   - Temperate Coniferous Forests
+   - Mediterranean Forests, Woodlands & Scrub
+   - Tropical & Subtropical Coniferous Forests
+   - Tropical & Subtropical Dry Broadleaf Forests
+   - Tropical & Subtropical Moist Broadleaf Forests
+   - Mangroves
 
-### 6. Consensus Development (`06_consensus.R`)
-- Develops consensus LAI values using 5 different approaches:
-  - Sample size weighting
-  - Meta-analysis (inverse variance)
-  - Robust (median-based)
-  - Bayesian
-  - Expert judgment
-- Selects simple average as final consensus method
-- **Outputs**: `final_simple_average_consensus.csv`, consensus plots
+5. **Applies IQR filtering** - Removes outliers beyond 1.5 × IQR per biome (removes ~2% of records)
 
-### 7. Integration (`07_integration.R`)
-- Integrates consensus LAI values with Gauci biome table
-- Calculates 1-sided and 2-sided leaf surface areas
-- Computes woody:leaf surface area ratios by forest cover type
-- **Outputs**: `biome_table_enhanced_with_lai.csv`, ratio plots
+6. **Calculates median LAI** - Per-biome median as canonical estimate
+
+7. **Assigns WAI values** - From Gauci et al. (2024):
+   - Tropical moist broadleaf: 4.12 m² m⁻²
+   - All other forest biomes: 3.07 m² m⁻²
+
+8. **Computes woody:leaf ratios** - WAI / (LAI × 2), using two-sided LAI for like-for-like comparison of total surface areas
 
 ## Key Outputs
 
-### Final Products
-- **`biome_table_enhanced_with_lai.csv`**: Complete biome table with consensus LAI values and surface area calculations
-- **`final_simple_average_consensus.csv`**: Consensus LAI values for each biome
-- **`global_surface_area_summary.csv`**: Global totals and woody:leaf ratios
-
-### Visualizations
-- Distribution plots for each dataset
-- Comparison plots between datasets
-- Consensus method comparisons
-- Woody:leaf ratio visualizations with color-coded interpretations
+- `forest_final_lai_by_biome.csv` - Median LAI per forest biome
+- `forest_biome_table_with_lai_and_ratios.csv` - Complete results table
+- `forest_woody_leaf_ratios_2sided.csv` - Woody:leaf ratios by biome
+- `forest_woody_leaf_ratios_2sided.png` - Visualization
 
 ## Data Sources
 
-### Input Datasets
-1. **Asner LAI Data** (`LAI_data_asner.csv`)
-   - Based on Asner et al. (2003) global synthesis of 1,008 LAI measurements from ~400 field sites
-   - Contains LAI measurements with Biome and Biomecover classifications
-   - Spans global biomes from 1932-2000 publication period
-   - Available from ORNL DAAC (Short Name: LAI_Woody_Plants_1231)
-   - Includes coordinates for spatial mapping
+### Iio LAI Database
+- **Citation**: Iio, A., and A. Ito. 2014. A Global Database of Field-observed Leaf Area Index in Woody Plant Species, 1932-2011. ORNL DAAC. doi:10.3334/ORNLDAAC/1231
+- **Reference**: Iio et al. (2014) Global Ecology and Biogeography 23:274–285. doi:10.1111/geb.12133
+- Site-specific maximum LAI values; excludes measurements affected by drought, disturbance, or immature/declining vegetation
+- All values standardized to half-surface-area (HSA) basis with clumping corrections
 
-2. **Iio LAI Data** (`lai_data_ilo.csv`)
-   - Based on Iio et al. (2014) compilation of 2,606 field-observed LAI values from 554 literature sources
-   - Published between 1932-2011, representing woody species globally
-   - Contains Plant Functional Type (PFT) classifications (DB, EB, EC, DC, sDB, Mix)
-   - Includes climate data (MAT, MAP), species information, and coordinates
-   - Uses standardized definition of LAI as half of total surface area (HSA)
+### Gauci WAI Data
+- **Citation**: Gauci, V. et al. (2024) Global atmospheric methane uptake by upland tree woody surfaces. Nature 631:796–800. doi:10.1038/s41586-024-07592-w
+- Terrestrial laser scanning measurements from closed-canopy forests
 
-3. **Gauci Biome Table** (`biome_table_gauci.csv`)
-   - Reference table with standardized WWF terrestrial biome classifications (Olson & Dinerstein)
-   - Contains forest cover proportions from MODIS, Census, and Census+Shrubs datasets
-   - Includes woody surface areas from Gauci et al. (2024) terrestrial laser scanning analysis
-
-4. **WWF Terrestrial Ecoregions** (`wwf_terr_ecos.shp`)
-   - Terrestrial Ecoregions of the World (TEOW) biogeographic regionalization
-   - 867 terrestrial ecoregions classified into 14 biomes (forests, grasslands, deserts, etc.)
-   - Represents original distribution of distinct assemblages of species and communities
-   - Used for coordinate-based spatial mapping when other biome classifications are ambiguous
-   - Available from: https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world
-
-## Methodology
-
-### Biome Mapping Strategy
-- **Asner**: Biomecover (primary) → Biome (fallback) → Spatial WWF (last resort)
-- **ILO**: PFT+Climate (primary) → Species (refinement) → Climate only → Spatial WWF
-
-### Statistical Approach
-- IQR filtering within each biome to remove outliers
-- No statistical testing (by design) - purely descriptive analysis
-- Multiple consensus methods compared for robustness
-
-### Consensus Selection
-- Simple average chosen as final method: `(Asner_LAI + ILO_LAI) / 2`
-- Most transparent and easily interpretable
-- Validated against 5 sophisticated consensus methods
+### WWF Ecoregions
+- **Citation**: Olson, D.M. et al. (2001) Terrestrial ecoregions of the world: a new map of life on Earth. BioScience 51:933–938.
+- https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world
 
 
+## Notes
 
-## Running the Analysis
+The woody:leaf ratios presented here are preliminary estimates given that only two WAI values are currently available (one for tropical moist forests, one for all others). These values indicate that woody-to-leaf ratios vary among forest biomes, but more widespread WAI measurements will be necessary to characterize this variation precisely. The lowest ratios likely occur in herbaceous/non-woody biomes and the highest in xeric ecosystems, but WAI data do not yet exist for these vegetation types.
 
-### Full Workflow
-```r
-# Set working directory to project root
-setwd("path/to/project")
+## Requirements
 
-# Run scripts in order
-source("scripts/01_LAI_mapping.R")
-source("scripts/02_LAI_calcs.R") 
-source("scripts/03_ilo_mapping.R")
-source("scripts/04_ilo_calcs.R")
-source("scripts/05_compare_lais.R")
-source("scripts/06_consensus.R")
-source("scripts/07_integration.R")
-```
-
-### Individual Scripts
-Each script can be run independently, but later scripts depend on outputs from earlier ones.
-
-
-
-
-
-
-
-## Citation and Data Use
-
-When using this analysis or derived products, please cite:
-- Asner, G.P., Scurlock, J.M.O., Hicke, J.A. (2003). Global synthesis of leaf area index observations: implications for ecological and remote sensing studies. *Global Ecology and Biogeography*, 12(3), 191-205. https://doi.org/10.1046/j.1466-822X.2003.00026.x
-- Iio, A., Hikosaka, K., Anten, N.P.R., Nakagawa, Y., Ito, A. (2014). Global dependence of field-observed leaf area index in woody species on climate: a systematic review. *Global Ecology and Biogeography*, 23(3), 274-285. https://doi.org/10.1111/geb.12133
-- Gauci, V., Pangala, S.R., Shenkin, A. et al. Global atmospheric methane uptake by upland tree woody surfaces. *Nature* **631**, 796–800 (2024). https://doi.org/10.1038/s41586-024-07592-w
-- Olson, D.M., Dinerstein, E., Wikramanayake, E.D., Burgess, N.D., Powell, G.V.N., Underwood, E.C., D'Amico, J.A., Itoua, I., Strand, H.E., Morrison, J.C., Loucks, C.J., Allnutt, T.F., Ricketts, T.H., Kura, Y., Lamoreux, J.F., Wettengel, W.W., Hedao, P., Kassem, K.R. (2001). Terrestrial ecoregions of the world: a new map of life on Earth. *Bioscience* 51(11):933-938.
-- This LAI analysis workflow
-
-## Contact and Support
-
-For questions about the analysis or to report issues:
-- Check script comments for methodology details
-- Review output CSV files for data validation
-- Examine diagnostic messages in script outputs
-
-## Version History
-
-- **v1.0**: Initial biome mapping and analysis
-- **v2.0**: Added ILO dataset integration  
-- **v3.0**: Implemented consensus development (removed statistical testing)
-- **v4.0**: Enhanced with surface area calculations and full integration
-
----
-
-*This analysis integrates LAI data with woody surface measurements from Gauci et al. (2024) to quantify global forest surface areas and woody:leaf ratios across WWF terrestrial biomes. The work complements the discovery that tree woody surfaces constitute a major atmospheric methane sink, providing a comprehensive view of forest surface area dynamics.*
+R packages: `dplyr`, `readr`, `stringr`, `ggplot2`, `forcats`, `tidyr`, `sf`, `knitr`, `RColorBrewer`, `patchwork`
