@@ -79,11 +79,33 @@ The analysis is contained in a single script (`01_wai.R`) that:
 - **Citation**: Olson, D.M. et al. (2001) Terrestrial ecoregions of the world: a new map of life on Earth. BioScience 51:933–938.
 - https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world
 
+## Requirements
+
+R packages: `dplyr`, `readr`, `stringr`, `ggplot2`, `forcats`, `tidyr`, `sf`, `knitr`, `RColorBrewer`, `patchwork`
 
 ## Notes
 
 The woody:leaf ratios presented here are preliminary estimates given that only two WAI values are currently available (one for tropical moist forests, one for all others). These values indicate that woody-to-leaf ratios vary among forest biomes, but more widespread WAI measurements will be necessary to characterize this variation precisely. The lowest ratios likely occur in herbaceous/non-woody biomes and the highest in xeric ecosystems, but WAI data do not yet exist for these vegetation types.
 
-## Requirements
+## Additional Literature Informing This Work
+Because the published manuscript is restricted to a 10-reference limit, the following works are provided here rather than cited in-text. These studies informed the broader scientific framing of woody surface ecology, gas exchange, nutrient cycling, and forest structural complexity.
 
-R packages: `dplyr`, `readr`, `stringr`, `ggplot2`, `forcats`, `tidyr`, `sf`, `knitr`, `RColorBrewer`, `patchwork`
+### Trace Gases
+1. Teskey, R. O., Saveyn, A., Steppe, K. & McGuire, M. A. Origin, fate and significance of CO₂ in tree stems. *New Phytol.* 177, 17–32 (2008).
+2. Pangala, S. R. et al. Large emissions from floodplain trees close the Amazon methane budget. *Nature* 552, 230–234 (2017).
+3. Barba, J. et al. Methane emissions from tree stems: a new frontier in the global carbon cycle. *New Phytol.* 222, 18–28 (2019).
+4. Jeffrey, L. C. et al. Bark-dwelling methanotrophic bacteria decrease methane emissions from trees. *Nat. Commun.* 12, 2127 (2021).
+5. Gorgolewski, A. S., Vantellingen, J., Caspersen, J. P. & Thomas, S. C. Overlooked sources of methane emissions from trees: branches and wounds. *Can. J. For. Res.* 52, 1165–1175 (2022).
+
+### Nutrient Cycling and Deposition
+6. Tukey, H. B., Ticknor, R. L., Hinsvark, O. N. & Wittwer, S. H. Absorption of nutrients by stems and branches of woody plants. *Science* 116, 167–168 (1952).
+7. Doty, S. L. et al. Variable nitrogen fixation in wild *Populus*. *PLoS One* 11, e0155979 (2016).
+8. Barrett, T. E., Ponette-González, A. G., Rindy, J. E. & Weathers, K. C. Wet deposition of black carbon: A synthesis. *Atmos. Environ.* 213, 558–567 (2019).
+
+### Forest Structural Measurements
+9. Asner, G. P., Scurlock, J. M. O. & Hicke, J. A. Global synthesis of leaf area index observations: implications for ecological and remote sensing studies. *Glob. Ecol. Biogeogr.* 12, 191–205 (2003).
+10. Calders, K. et al. Terrestrial laser scanning in forest ecology: expanding the horizon. *Remote Sens. Environ.* 251, 112102 (2020).
+11. Liu, X. et al. Enhancing ecosystem productivity and stability with increasing canopy structural complexity in global forests. *Sci. Adv.* 10, eadl1947 (2024).
+
+### Forest Surface Area Studies
+12. Gavrikov, V. L. Stem Surface Area as Subject of Study. In: *Stem Surface Area in Modeling of Forest Stands* (ed. Gavrikov, V. L.) 1–13 (Springer International Publishing, Cham, 2017).
