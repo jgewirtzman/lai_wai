@@ -88,7 +88,7 @@ R packages: `dplyr`, `readr`, `stringr`, `ggplot2`, `forcats`, `tidyr`, `sf`, `k
 The woody:leaf ratios presented here are preliminary estimates given that only two WAI values are currently available (one for tropical moist forests, one for all others). These values indicate that woody-to-leaf ratios vary among forest biomes, but more widespread WAI measurements will be necessary to characterize this variation precisely. The lowest ratios likely occur in herbaceous/non-woody biomes and the highest in xeric ecosystems, but WAI data do not yet exist for these vegetation types.
 
 ## Additional Literature Informing This Work
-Because the published manuscript is restricted to a 10-reference limit, the following works are provided here rather than cited in-text. These studies informed the broader scientific framing of woody surface ecology, gas exchange, nutrient cycling, and forest structural complexity.
+Because the published manuscript is restricted to a reference limit, the following works are provided here rather than cited in-text. These studies informed the broader scientific framing of woody surface ecology, gas exchange, nutrient cycling, and forest structural complexity.
 
 ### Trace Gases
 1. Teskey, R. O., Saveyn, A., Steppe, K. & McGuire, M. A. Origin, fate and significance of CO₂ in tree stems. *New Phytol.* 177, 17–32 (2008).
